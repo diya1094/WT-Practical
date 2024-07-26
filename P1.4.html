@@ -1,0 +1,136 @@
+<html>
+<head>
+	<title>Registration Form</title>
+	<style>
+		td{
+			padding: 6px;
+		}
+	</style>
+</head>
+<body>
+	<form style="width:500; margin: 0 auto">
+		
+		<table border="1" cellpadding="3" style="border: 1px solid black; border-collapse: collapse;">
+			<tr>
+				<td colspan="2"><h2 style="margin: 0 auto;width:300px">Student Registration form</h2></td>
+			</tr>
+			<tr>
+				<td><label for="username">Username:</label></td>
+				<td><input type="text" name="username" required></input></td>
+			</tr>
+			<tr>
+				<td><label for="password">Password:</label></td>
+				<td><input type="password" name="password" required></input></td>
+			</tr>
+			<tr>
+				<td><label for="name">Name:</label></td>
+				<td><input type="text" name="name" required></input></td>
+			</tr>
+			<tr>
+				<td><label for="rollno">Enrollment No.:</label></td>
+				<td><input type="text" name="rollno" required></input></td>
+			</tr>
+			<tr>
+				<td><label for="email">Email ID:</label></td>
+				<td><input type="email" name="email" required></input></td>
+			</tr>
+			<tr>
+				<td><label for="mobile">Mobile No.:</label></td>
+				<td><input type="text" name="mobile" required></input></td>
+			</tr>
+			<tr>
+				<td><label for="gender">Gender:</label></td>
+				<td>
+					<input type="radio" name="gender">M</input>
+					<input type="radio" name="gender">F</input>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="hobbies">Hobbies:</label></td>
+				<td><input type="checkbox" name="hobbies">Cooking</input>
+					<input type="checkbox" name="hobbies">Dance</input>
+					<input type="checkbox" name="hobbies">Reading</input></td>
+			</tr>
+			<tr>
+				<td><label for="address">Address:</label></td>
+				<td><textarea rows="4" cols="15" name="address" style="resize: none;" required></textarea></td>
+			</tr>
+			<tr>
+				<td><label>State:</label></td>
+				<td><select>
+					<option>Select</option>
+					<option>Gujarat</option>
+					<option>Mumbai</option>
+					<option>Delhi</option>
+					<option>Andhra Pradesh</option>
+					<option>Punjab</option>
+					<option>Rajasthan</option>
+					<option>Madhya Pradesh</option>
+					<option>Odisha</option>
+					<option>Haryana</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><label for="pin">Pin Code:</label></td>
+				<td><input type="text" name="pin"></input></td>
+			</tr>
+			<tr>
+				<td>
+					<label>Semester:</label>
+				</td>
+				<td>
+					<select>
+						<option>Select</option>
+						<option>1</option>
+						<option>3</option>
+						<option>5</option>
+						<option>7</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Institute:</label></td>
+				<td><select>
+					<option>Select</option>
+					<option>IITE</option>
+					<option>IISHLS</option>
+					<option>IIICT</option>
+					<option>IAS</option>
+					<option>IIMS</option>
+					<option>IDS</option>
+					<option>IATE</option>
+					<option>IPR</option>
+					<option>IIL</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><label>Branch:</label></td>
+				<td><select>
+					<option>Select</option>
+					<option>CE</option>
+					<option>CSE</option>
+					<option>ICT</option>
+					<option>Mech</option>
+					<option>Electrical</option>
+					<option>Civil</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><label for="myfile">Select a file:</label></td>
+					<td><input type="file" id="myfile" name="myfile"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="checkbox" name="ok" required>
+					<label for="ok">I confirm the details of the registration form</label></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="Submit">
+					<input type="reset" value="Reset">
+				</td>
+			</tr>
+		</table>
+		
+	</form>
+</body>
+</html>
