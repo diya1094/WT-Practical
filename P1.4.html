@@ -12,31 +12,31 @@
 		
 		<table border="1" cellpadding="3" style="border: 1px solid black; border-collapse: collapse;">
 			<tr>
-				<td colspan="2"><h2 style="margin: 0 auto;width:300px">Student Registration form</h2></td>
+				<td colspan="2"><h2 style="margin: 0 auto;width:300px; text-align: center;">Registration form</h2></td>
 			</tr>
 			<tr>
 				<td><label for="username">Username:</label></td>
-				<td><input type="text" name="username" required></input></td>
+				<td><input type="text" name="username" placeholder="Enter Username" required></input></td>
 			</tr>
 			<tr>
 				<td><label for="password">Password:</label></td>
-				<td><input type="password" name="password" required></input></td>
+				<td><input type="password" name="password" placeholder="Enter Password" required></input></td>
 			</tr>
 			<tr>
 				<td><label for="name">Name:</label></td>
-				<td><input type="text" name="name" required></input></td>
+				<td><input type="text" name="name" placeholder="Enter Your Name" required></input></td>
 			</tr>
 			<tr>
 				<td><label for="rollno">Enrollment No.:</label></td>
-				<td><input type="text" name="rollno" required></input></td>
+				<td><input type="text" name="rollno" placeholder="Enter Enrollment No." ></input></td>
 			</tr>
 			<tr>
 				<td><label for="email">Email ID:</label></td>
-				<td><input type="email" name="email" required></input></td>
+				<td><input type="email" name="email" placeholder="Enter Email" required></input></td>
 			</tr>
 			<tr>
-				<td><label for="mobile">Mobile No.:</label></td>
-				<td><input type="text" name="mobile" required></input></td>
+				<td><label for="phone">Phone No.:</label></td>
+				<td><input type="number" name="phone" placeholder="Enter Phone No." max="10" required></input></td>
 			</tr>
 			<tr>
 				<td><label for="gender">Gender:</label></td>
@@ -46,14 +46,15 @@
 				</td>
 			</tr>
 			<tr>
-				<td><label for="hobbies">Hobbies:</label></td>
-				<td><input type="checkbox" name="hobbies">Cooking</input>
-					<input type="checkbox" name="hobbies">Dance</input>
-					<input type="checkbox" name="hobbies">Reading</input></td>
+				<td><label for="hobby">Hobbies:</label></td>
+                <td><input type="checkbox" name="hobby">Chess</input>
+                    <input type="checkbox" name="hobby">Cricket</input>
+                    <input type="checkbox" name="hobby">Basketball</input>
+				</td>
 			</tr>
 			<tr>
 				<td><label for="address">Address:</label></td>
-				<td><textarea rows="4" cols="15" name="address" style="resize: none;" required></textarea></td>
+				<td><textarea rows="4" cols="15" name="address" placeholder="Enter Address" style="resize: none;" required></textarea></td>
 			</tr>
 			<tr>
 				<td><label>State:</label></td>
@@ -62,17 +63,15 @@
 					<option>Gujarat</option>
 					<option>Mumbai</option>
 					<option>Delhi</option>
-					<option>Andhra Pradesh</option>
 					<option>Punjab</option>
 					<option>Rajasthan</option>
 					<option>Madhya Pradesh</option>
-					<option>Odisha</option>
 					<option>Haryana</option>
 				</select></td>
 			</tr>
 			<tr>
 				<td><label for="pin">Pin Code:</label></td>
-				<td><input type="text" name="pin"></input></td>
+				<td><input type="text" name="pin" placeholder="Enter Pin Code"></input></td>
 			</tr>
 			<tr>
 				<td>
@@ -116,7 +115,7 @@
 				</select></td>
 			</tr>
 			<tr>
-				<td><label for="myfile">Select a file:</label></td>
+				<td><label for="myfile">Upload Photo:</label></td>
 					<td><input type="file" id="myfile" name="myfile"></td>
 			</tr>
 			<tr>
