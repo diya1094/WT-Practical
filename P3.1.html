@@ -35,6 +35,7 @@
             border: 2px solid rgb(190, 129, 14);
             border-radius: 5px;
             text-align: right;
+            margin-bottom: 7px;
         }
     </style>
 </head>
@@ -94,7 +95,6 @@
             document.getElementById("result").value = "";
         }
 
-        // Add keyboard support
         document.addEventListener('keydown', function(event) {
             const key = event.key;
             if ((key >= '0' && key <= '9') || key === '.' || key === '+' || key === '-' || key === '*' || key === '/') {

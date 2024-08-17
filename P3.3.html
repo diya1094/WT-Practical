@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Practical 3.3</title>
+        <style>
+            td{
+                padding-bottom: 15px;
+            }
+            button{
+                padding: 10px 90px;
+            }
+            b{
+                font-size: 20px;
+                padding: 25px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Multiply first digit by itself for second digit times</h1>
+        <table class="rect">
+            <tr>
+                <td>
+                    <label>Enter two digit number: </label>
+                </td>
+                <td>
+                    <input type="text" name="num" id="number">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Output: </label>
+                </td>
+                <td>
+                    <input type="text" id="result" name="result">
+                </td>
+            </tr>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" name ="calculate" value="Calculate" onclick="calc()">
+                </td>
+            </tr>
+        </table>
+        <script>
+            function multiplyDigits(number) {
+                if (number < 10 || number > 99) {
+                    return "Please enter a two-digit number.";
+                }
+
+                // Convert the number to a string to easily access each digit
+                let numberStr = number.toString();
+
+                // Separate the digits
+                let firstDigit = parseInt(numberStr[0]);
+                let secondDigit = parseInt(numberStr[1]);
+
+                // Multiply the first digit by itself for second digit times
+                let result = 1;
+                for (let i = 0; i < secondDigit; i++) {
+                    result *= firstDigit;
+                }
+
+                return result;
+            }
+
+            function calc() {
+                let number = document.getElementById("number").value;
+                let result = multiplyDigits(parseInt(number));
+                document.getElementById("result").value = result;
+            }
+        </script>
+    </body>
+</html>
