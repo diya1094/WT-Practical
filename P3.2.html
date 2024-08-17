@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Area</title>
+        <style>
+            td{
+                padding-bottom: 15px;
+            }
+            button{
+                padding: 10px 90px;
+            }
+            b{
+                font-size: 20px;
+                padding: 25px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Area Calcution Using JS</h1>
+        <table class="rect">
+            <tr>
+                <td colspan="2"><b>Area Of Rectangle</b></td>
+             </tr>
+            <tr>
+                <td>
+                    <label>Length of rectangle(in m): </label>
+                </td>
+                <td>
+                    <input type="text" name="Length" id="lenR">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Width of rectangle(in m): </label>
+                </td>
+                <td>
+                    <input type="text" name="width" id="widR">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Area of rectangle(in m^2): </label>
+                </td>
+                <td>
+                    <input type="text" id="areaR" name="result">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" name ="result" value="calculateArea" onclick="areaOR()">
+                </td>
+            </tr>
+            <tr>
+               <td colspan="2"><b>Area Of Triangle</b></td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Height of triangle(in m): </label>
+                </td>
+                <td>
+                    <input type="text" name="Length" id="lenT">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Breadth of triangle(in m): </label>
+                </td>
+                <td>
+                    <input type="text" name="width" id="widT">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Area of Triangle(in m^2): </label>
+                </td>
+                <td>
+                    <input type="text" id="areaT" name="result">
+                </td>
+            </tr> 
+            <tr>
+                <td colspan="2">
+                    <input type="button" name ="result" value="calculateArea" onclick="areaOT()">
+                </td>
+            </tr>
+            
+        </table>
+        <script>
+            function areaOR(){
+                var lentR =  parseInt(document.getElementById("lenR").value);
+                var widtR =  parseInt(document.getElementById("widR").value);
+                var areaR = lentR*widtR;
+                document.getElementById("areaR").value = areaR;
+            }
+            function areaOT(){
+                var lentT =  parseInt(document.getElementById("lenT").value);
+                var widtT =  parseInt(document.getElementById("widT").value);
+                var areaT = 0.5 * lentT * widtT;
+                document.getElementById("areaT").value = areaT;
+            }
+        </script>
+    </body>
+</html>
