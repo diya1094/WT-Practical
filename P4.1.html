@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AngularJS Search Box</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <style>
+    .searchBox {
+      margin: 20px 0;
+    }
+    input {
+      width: 20%;
+      padding: 10px;
+      text-align: center;
+    }
+    h1 {
+      color: green;
+    }
+  </style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+  <div class="container">
+    <h4>Programming Languages</h4>
+
+    <div class="searchBox">
+      <input type="text"
+             placeholder="Search Box"
+             ng-model="searchValue"
+             ng-keyup="onSubmit($event)" />
+    </div>
+
+    <div ng-if="condition">
+      <i class="fa fa-spinner fa-spin" aria-hidden="true"></i> 
+      Searching your results for <strong>{{prevText}}</strong>
+    </div>
+
+    <div ng-if="!condition">
+      <h6>{{res_cnt}} Search Result(s) Found:
+        <span ng-repeat="lang in res_list">
+          <strong>{{lang}}</strong>
+        </span>
+      </h6>
+    </div>
+  </div>
+
+  <script>
+    var app = angular.module('myApp', []);
+
+    app.controller('myCtrl', function($scope, $timeout) {
+      $scope.searchValue = '';
+      $scope.condition = false;
+      $scope.prevText = '';
+      $scope.list_lang = ['java', 'c++', 'python', 'c', 'javascript'];
+      $scope.res_list = [];
+      $scope.res_cnt = 0;
+
+      $scope.onSubmit = function(event) {
+        if (event.keyCode === 13) { 
+          $scope.condition = true;
+          $scope.prevText = $scope.searchValue;
+          $scope.res_cnt = 0;
+          $scope.res_list = [];
+
+          $timeout(function() {
+            $scope.condition = false;
+            $scope.list_lang.forEach(function(lang) {
+              if (lang.toLowerCase().startsWith($scope.prevText.toLowerCase())) {
+                $scope.res_cnt++;
+                $scope.res_list.push(lang);
+              }
+            });
+            $scope.searchValue = '';
+          }, 3000);
+        }
+      };
+    });
+  </script>
+
+</body>
+</html>
